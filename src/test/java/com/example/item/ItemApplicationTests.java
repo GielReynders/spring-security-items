@@ -1,4 +1,4 @@
-package com.home.item;
+package com.example.item;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
