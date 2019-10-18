@@ -1,6 +1,9 @@
 plugins {
     id 'org.springframework.boot' version '2.1.9.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'com.bmuschko.docker-spring-boot-application' version '5.2.0'
+    id 'com.bmuschko.docker-remote-api' version '5.2.0'
+
     id 'java'
 }
 
@@ -10,6 +13,15 @@ sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
+}
+
+// Import task types
+import com.bmuschko.gradle.docker.tasks.image.*
+
+// Use task types
+task buildMyAppImage(type: DockerBuildImage) {
+    inputDir = project.file('.')
+    tags.add('test/item-security:latest')
 }
 
 test {
