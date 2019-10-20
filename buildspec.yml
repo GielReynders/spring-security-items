@@ -12,6 +12,10 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - echo $test
+      - echo bierbier
+      - echo $bierbier
+      - echo bier
+      - echo $bier
       - gradle build
     finally:
       - echo Build finished
