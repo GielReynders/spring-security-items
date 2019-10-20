@@ -4,5 +4,4 @@ phases:
   install:
     runtime-versions:
       java: openjdk11
-  build:
-    - echo Building the Go code...
+
