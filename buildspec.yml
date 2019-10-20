@@ -2,7 +2,6 @@ version: 0.2
 
 phases:
   install:
-    - echo Installing Runtime-version OpenJDK11...
     runtime-versions:
       java: openjdk11
   build:
