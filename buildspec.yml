@@ -13,6 +13,7 @@ phases:
       - echo Build started on `date`
       - echo docker pass
       - echo $docker_pass
+      - gradle --version
       - gradle build
     finally:
       - echo Build finished
