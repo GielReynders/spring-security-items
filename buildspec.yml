@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    - echo Installing Runtime-version OpenJDK11...
+    runtime-versions:
+      java: openjdk11
+  build:
+    - echo Building the Go code...
+    commands:
+      -./gradlew build
+    gradle --version
+    gradle build
+artifacts:
+  files:
+    -app/build/libs/item-0.0.1-SNAPSHOT.jar
