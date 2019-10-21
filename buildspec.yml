@@ -16,7 +16,7 @@ phases:
       - gradle build
       - echo docker pass
       - echo $docker_pass
-      - docker build -t spring-security-items .
+      - docker build -t drabzes/spring-security-items .
       - docker images
       - docker push drabzes/spring-security-items:latest
     finally:
