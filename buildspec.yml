@@ -9,9 +9,6 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - docker version
-      - docker login –u User –p $LOGIN_PASSWORD
-      - docker login –u $docker_username –p $docker_passowrd
   build:
     commands:
       - echo Entered the build phase...
@@ -20,6 +17,7 @@ phases:
       - echo $docker_pass
       - gradle --version
       - gradle build
+      - docker push drabzes/spring-security-items:latest
     finally:
       - echo Build finished
 
