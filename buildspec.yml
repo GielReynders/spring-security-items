@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - gradle build
       - echo docker pass
       - echo $docker_pass
       - docker build -t spring-security-items .
