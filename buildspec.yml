@@ -15,8 +15,7 @@ phases:
       - echo Build started on `date`
       - echo docker pass
       - echo $docker_pass
-      - gradle --version
-      - gradle build
+      - docker build -t spring-security-items .
       - docker push drabzes/spring-security-items:latest
     finally:
       - echo Build finished
