@@ -10,8 +10,7 @@ phases:
     commands:
       - echo Entered the pre_build phase...
       - docker version
-      - docker login –u User –p $LOGIN_PASSWORD
-      - docker login –u $docker_username –p $docker_passowrd
+      - docker login -u $DOCKER_LOGIN -p $LOGIN_PASSWORD
   build:
     commands:
       - echo Entered the build phase...
