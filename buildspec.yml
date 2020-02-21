@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+    commands:
+      - apt-get update -y
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - echo $LOGIN_PASSWORD
+      - docker version
+      - docker login -u $DOCKER_LOGIN -p $LOGIN_PASSWORD
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - echo docker pass
+      - echo $docker_pass
+      - gradle --version
+      - gradle build
+    finally:
+      - echo Build finished
+
